@@ -1,0 +1,9 @@
+body {
+  font-family: "Helvetica","Arial",sans-serif;
+  font-size: 10pt;
+}
+abbr {
+  text-decoration: none;/*abbr是有下划线的*/
+  border: 0;
+  font-style: normal;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Example</title>
+  <script type="text/javascript">
+window.onload = function() {
+  var para = document.getElementById("example");
+  // element.style.color样式信息的检索
+  para.style.color = "black";
+  para.style.font = "2em 'Times',serif";
+  //font-family特殊！！！
+  //如果是font-family会被浏览器当做：元素的style属性的font属性，减去一个名字为family的变量，把整个表达式解释为一个减法运算
+  alert("The font family is " + para.style.fontFamily);
+}
+  </script>
+</head>
+<body>
+  <p id="example" style="color: grey; font-family: 'Arial',sans-serif;">
+An example of a paragraph
+  </p>
+</body>
+</html>
