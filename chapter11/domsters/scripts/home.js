@@ -42,20 +42,27 @@ function prepareSlideshow() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
   if (!document.getElementById("intro")) return false;
-  var intro = document.getElementById("intro");
+  //获取文字段
+  var intro = document.getElementById("intro");，
+  //创建div，给div一个id
   var slideshow = document.createElement("div");
   slideshow.setAttribute("id","slideshow");
+  //创建图片元素，放入图片，设置属性，网页那个不规矩相框
   var frame = document.createElement("img");
   frame.setAttribute("src","images/frame.gif");
   frame.setAttribute("alt","");
   frame.setAttribute("id","frame");
+  //将图片放入div
   slideshow.appendChild(frame);
+//创建图片元素，放入图片，设置属性，照片
   var preview = document.createElement("img");
   preview.setAttribute("src","images/slideshow.gif");
   preview.setAttribute("alt","a glimpse of what awaits you");
   preview.setAttribute("id","preview");
   slideshow.appendChild(preview);
+
   insertAfter(slideshow,intro);
+  //获取导航条，根据导航条鼠标的移动，主页下方的照片跟着移动
   var links = document.getElementsByTagName("a");
   for (var i=0; i<links.length; i++) {
     links[i].onmouseover = function() {

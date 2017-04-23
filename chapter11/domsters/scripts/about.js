@@ -14,6 +14,7 @@ function prepareInternalnav() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
   if (!document.getElementById("internalnav")) return false;
+  
   var nav = document.getElementById("internalnav");
   var links = nav.getElementsByTagName("a");
   for (var i=0; i<links.length; i++ ) {
